@@ -56,8 +56,8 @@ public class DemoAssistantStream {
                 .build()).join();
         System.out.println("-".repeat(80));
         stream.filter(event -> event.getName().equals(Events.THREAD_MESSAGE_DELTA))
-                .map(event -> ((TextContent) ((ThreadMessageDelta) event.getData()).getDelta().getContent().get(0))
-                        .getValue())
+                .map(event -> ((TextContent) ((ThreadMessageDelta) event.getData())
+                        .getDelta().getContent().get(0)).getValue())
                 .forEach(System.out::print);
         System.out.println();
     }
