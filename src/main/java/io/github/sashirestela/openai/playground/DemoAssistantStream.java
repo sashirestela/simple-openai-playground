@@ -1,8 +1,8 @@
 package io.github.sashirestela.openai.playground;
 
 import io.github.sashirestela.openai.SimpleOpenAI;
-import io.github.sashirestela.openai.OpenAI.Assistants;
-import io.github.sashirestela.openai.OpenAI.Threads;
+import io.github.sashirestela.openai.OpenAIBeta.Assistants;
+import io.github.sashirestela.openai.OpenAIBeta.Threads;
 import io.github.sashirestela.openai.domain.assistant.AssistantRequest;
 import io.github.sashirestela.openai.domain.assistant.Events;
 import io.github.sashirestela.openai.domain.assistant.TextContent;
@@ -10,6 +10,7 @@ import io.github.sashirestela.openai.domain.assistant.ThreadMessageDelta;
 import io.github.sashirestela.openai.domain.assistant.ThreadMessageRequest;
 import io.github.sashirestela.openai.domain.assistant.ThreadRequest;
 import io.github.sashirestela.openai.domain.assistant.ThreadRunRequest;
+import io.github.sashirestela.openai.domain.assistant.ThreadMessageRequest.Role;
 
 public class DemoAssistantStream {
 
@@ -40,7 +41,7 @@ public class DemoAssistantStream {
     public void createThread() {
         var thread = threadService.create(ThreadRequest.builder()
                 .message(ThreadMessageRequest.builder()
-                        .role("user")
+                        .role(Role.USER)
                         .content("What is the impact of the LLM on the software developer sector?")
                         .build())
                 .build()).join();

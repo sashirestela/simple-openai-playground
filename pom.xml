@@ -16,7 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>11</maven.compiler.release>
     <!-- Dependencies Versions -->
-    <simple-openai.version>2.1.0</simple-openai.version>
+    <simple-openai.version>2.3.0</simple-openai.version>
     <slf4j.version>2.0.12</slf4j.version>
     <!-- Plugins Versions -->
     <compiler.version>3.12.1</compiler.version>
@@ -45,11 +45,11 @@
   </dependencyManagement>
 
   <dependencies>
-  <dependency>
-    <groupId>io.github.sashirestela</groupId>
-    <artifactId>simple-openai</artifactId>
-  </dependency>
-  <dependency>
+    <dependency>
+      <groupId>io.github.sashirestela</groupId>
+      <artifactId>simple-openai</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
     </dependency>
