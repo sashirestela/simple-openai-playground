@@ -85,7 +85,7 @@ public class DemoAssistantFunctionStream {
                     .assistantId(assistantId)
                     .build()).join();
             handleRunEvents(runStream);
-            myMessage = System.console().readLine("\nAsk a question (write 'exit' to finish):");
+            myMessage = System.console().readLine("\nAsk a question (or write 'exit' to finish): ");
         }
     }
 
